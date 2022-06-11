@@ -1,4 +1,9 @@
 div.slider
+    img.backteria(src="../../static/backteria.png" alt="")
+    img.stick(src="../../static/stick.png" alt="")
+    img.backteriaSmall(src="../../static/backteriaSmall.png" alt="")
+    img.backteriaBig(src="../../static/backteriaBig.png" alt="")
+    img.sperm(src="../../static/sperm.png" alt="")
     div(class="item")
         div(class="info")
             span.article ПРИВЕТ,
@@ -11,21 +16,34 @@ div.slider
                         polygon(points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 ")
                     span Что дальше?
     div(class="item")
+        - var n = 0;
+            img.sperm(src="../../static/sperm.png" alt="" right=`10*${++n}`)
         div.info
             span.article ТЕКСТ!{'\n'}СООБЩЕНИЯ
             div.elem-table.message-overflow.bold Lorem ipsum dolor sit amet,
                 span.normal consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
     div(class="item")
         div.info-brend
-            span.info-brend__article КЛЮЧЕВОЕ СООБЩЕНИЕ
+            div.title-brand
+                span.info-brend__article(data-bind-style="display:hiddenTitle") КЛЮЧЕВОЕ СООБЩЕНИЕ
+                span.info-brend__article.add-title(data-bind-style="display:hiddenAddTitle") ПРЕИМУЩЕСТВА
+                svg.close-btn.hidden(data-bind="onclick:menuClose" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="HeaderContent__icon--39VdR HeaderContent__close-icon--30A_k" data-tid="f934d019")
+                    path(d="M14.7071 13.2929C15.0976 13.6834 15.0976 14.3166 14.7071 14.7071C14.3166 15.0976 13.6834 15.0976 13.2929 14.7071L9.56569 10.9799C9.36768 10.7819 9.26867 10.6829 9.15451 10.6458C9.05409 10.6132 8.94591 10.6132 8.84549 10.6458C8.73133 10.6829 8.63232 10.7819 8.43432 10.9799L4.70711 14.7071C4.31658 15.0976 3.68342 15.0976 3.29289 14.7071C2.90237 14.3166 2.90237 13.6834 3.29289 13.2929L7.0201 9.56569C7.21811 9.36768 7.31711 9.26867 7.35421 9.15451C7.38684 9.05409 7.38684 8.94591 7.35421 8.84549C7.31711 8.73133 7.21811 8.63232 7.0201 8.43432L3.29289 4.70711C2.90237 4.31658 2.90237 3.68342 3.29289 3.29289C3.68342 2.90237 4.31658 2.90237 4.70711 3.29289L8.43432 7.0201C8.63232 7.21811 8.73133 7.31711 8.84549 7.35421C8.94591 7.38684 9.05409 7.38684 9.15451 7.35421C9.26867 7.31711 9.36768 7.21811 9.56569 7.0201L13.2929 3.29289C13.6834 2.90237 14.3166 2.90237 14.7071 3.29289C15.0976 3.68342 15.0976 4.31658 14.7071 4.70711L10.9799 8.43431C10.7819 8.63232 10.6829 8.73133 10.6458 8.84549C10.6132 8.94591 10.6132 9.05409 10.6458 9.15451C10.6829 9.26867 10.7819 9.36768 10.9799 9.56569L14.7071 13.2929Z")
             span.descr BREND
                 span.descr.bold XY
-            div.brend-table
-                span.elem-table consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cu
+            div.brend-table(data-bind-style="display:hiddenTable")
+                span.elem-table consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cu consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cu
                 div.right-cols
                     span.elem-table Aenean massa. Cum sociconsectetuer adipiscing elit.Aenean massa. Cum sociconsectetuer adipiscing elit.
-                    button.btn-pinky
+                    button.btn-pinky(data-bind="onclick:BrandBtn")
                         svg.btn-arrow(version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 83 83" style="enable-background:new 0 0 83 83;" xml:space="preserve")
                             g
                                 path(d="M81,36.166H2c-1.104,0-2,0.896-2,2v6.668c0,1.104,0.896,2,2,2h79c1.104,0,2-0.896,2-2v-6.668C83,37.062,82.104,36.166,81,36.166z")
                         span Подробнее
+            div.addTable(data-bind-style="display:hiddenAddTable")
+                span.title 01
+                    span.normal  consectetuer adipiscing elit. Aenean commodo ligula e consectetuer adipiscing elit. Aenean commodo ligula e
+                span.title 02
+                    span.normal  consectetuer adipiscing elit. Aeneanuer adipiscing elit. Aenean commodo ligula e
+                span.title 03
+                    span.normal  consectetuer adipiscing elit. Aenean commodo ligula

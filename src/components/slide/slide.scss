@@ -9,14 +9,18 @@
 }
 
 .info{
+  position: relative;
+  z-index: 2;
   display: flex;
   margin: 80px 60px;
   flex-direction: column;
 }
 .info-brend{
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  margin: 80px 30vw;
+  margin: 60px 90px auto 30vw;
+
 
   &__article{
     letter-spacing: 0;
@@ -64,8 +68,20 @@ span.bold {
   margin-inline: 50px;
 
 }
+span.title{
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 38px;
+  display: inline-grid;
+}
 span {
   font-weight: normal;
+}
+span.normal{
+  font-weight: normal;
+  color: black;
+  display: initial;
+  font-size: 20px;
 }
 .bold{
   font-weight: bold;
@@ -96,4 +112,104 @@ span {
   flex-direction: column;
   justify-content: flex-end;
   row-gap:40px;
+}
+.hidden{
+  visibility: hidden;
+}
+.title-brand{
+  display: flex;
+  justify-content: space-between;
+}
+
+.addTable{
+  display: none;
+  row-gap: 20px;
+  flex-direction: column;
+}
+.add-title{
+  display: none;
+}
+
+
+.backteria{
+  position: absolute;
+  right: 50px;
+  width: 100px;
+  animation-name: animation-back;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.stick{
+  width: 350px;
+  position: absolute;
+  left: -250px;
+  top: 40px;
+}
+.backteriaSmall{
+  position: absolute;
+  bottom: 150px;
+  left: 30px;
+
+  animation-name: animation-back-small;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.backteriaBig{
+  position: absolute;
+  bottom: -100px;
+  right: 300px;
+
+  animation-name: animation-back-big;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.sperm{
+  z-index: 3;
+  position: absolute;
+  transform: scale(0.5) rotate(366deg);
+  left: 120px;
+  top: 150px;
+
+
+}
+@keyframes animation-back-small {
+  from {
+    bottom: 150px;
+    left: 30px;
+  }
+  to {
+    bottom: 200px;
+    left: 10px;
+  }
+}
+
+@keyframes animation-back {
+  from {
+    top: 60px;
+    right: 50px;
+  }
+  to {
+    top: 30px;
+    right: 200px;
+  }
+}
+
+@keyframes animation-back-big {
+  from {
+    bottom: -300px;
+    right: 300px;
+  }
+  to {
+    bottom: -330px;
+    right: 300px;
+  }
 }

@@ -4,7 +4,7 @@ import './header.scss'
 
 export default class HeaderClass {
     private readonly info: object;
-    private autoBind;
+
 
     constructor(info) {
         this.info = info;

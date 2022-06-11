@@ -1,6 +1,6 @@
 import slideTemplate from "./slide.pug";
 import './slide.scss'
-
+import AutoBind from "Utils/autoBind"
 
 export default class SlideClass {
     render() {
@@ -8,6 +8,7 @@ export default class SlideClass {
     }
 
     setHandler() {
+        const autoBind = new AutoBind;
         let position: number = 0;
         const slide: HTMLElement = document.querySelector(".main");
 
@@ -45,11 +46,31 @@ export default class SlideClass {
 
 
         };
-
         slide.ondragstart = function () {
             return false;
         };
 
+
+        autoBind.setVariable("BrandBtn",()=>{
+            const info = document.querySelector(".info-brend");
+            info.classList.add("elem-table");
+            const close = document.querySelector(".close-btn");
+            close.classList.remove("hidden");
+            autoBind.setVariableStyle("hiddenTable","none");
+            autoBind.setVariableStyle("hiddenAddTable","flex");
+            autoBind.setVariableStyle("hiddenAddTitle","initial");
+            autoBind.setVariableStyle("hiddenTitle","none");
+        });
+        autoBind.setVariable("menuClose",()=>{
+            const info = document.querySelector(".info-brend");
+            info.classList.remove("elem-table");
+            const close = document.querySelector(".close-btn");
+            close.classList.add("hidden");
+            autoBind.setVariableStyle("hiddenTable","flex");
+            autoBind.setVariableStyle("hiddenAddTable","none");
+            autoBind.setVariableStyle("hiddenAddTitle","none");
+            autoBind.setVariableStyle("hiddenTitle","block");
+        })
 
     }
 
