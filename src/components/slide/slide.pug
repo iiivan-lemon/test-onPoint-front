@@ -1,10 +1,15 @@
 div.slider
     img.backteria(src="../../static/backteria.png" alt="")
-    img.stick(src="../../static/stick.png" alt="")
+    img.stick( src="../../static/stick.png" alt="")
     img.backteriaSmall(src="../../static/backteriaSmall.png" alt="")
-    img.backteriaBig(src="../../static/backteriaBig.png" alt="")
-    img.sperm(src="../../static/sperm.png" alt="")
-    div(class="item")
+    img.backteriaBig( src="../../static/backteriaBig.png" alt="")
+    img.sperm( src="../../static/sperm.png"  alt="")
+    img.sperm( src="../../static/sperm.png"  alt="")
+    img.brand(src="../../static/brand.png"  alt="")
+    - var n = 0;
+    while n < 4
+        img.sperm( src="../../static/sperm.png" alt="" style=`left: calc(${((++n) * 100)}px + 1000px);top: calc(${((n) * 100)}px - 70px);transform: scale(${(0.5 - n * 0.05)}) rotate(calc(${((n) * 5)-10}deg));z-index:0;`)
+    div(class="item" style=`background-image: url("../../static/back1.png");`)
         div(class="info")
             span.article ПРИВЕТ,
             span.descr ЭТО
@@ -15,14 +20,13 @@ div.slider
                     svg.btn-arrow(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve")
                         polygon(points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 ")
                     span Что дальше?
-    div(class="item")
-        - var n = 0;
-            img.sperm(src="../../static/sperm.png" alt="" right=`10*${++n}`)
+    div(class="item" style=`background-image: url("../../static/back2.png");`)
         div.info
             span.article ТЕКСТ!{'\n'}СООБЩЕНИЯ
-            div.elem-table.message-overflow.bold Lorem ipsum dolor sit amet,
-                span.normal consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-    div(class="item")
+            div.info-overflow.elem-table
+                div.bold.message-overflow Lorem ipsum dolor sit amet,
+                    span.normal consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+    div#item3(class="item" style=`background-image: url("../../static/back3.png");`)
         div.info-brend
             div.title-brand
                 span.info-brend__article(data-bind-style="display:hiddenTitle") КЛЮЧЕВОЕ СООБЩЕНИЕ
@@ -41,9 +45,20 @@ div.slider
                                 path(d="M81,36.166H2c-1.104,0-2,0.896-2,2v6.668c0,1.104,0.896,2,2,2h79c1.104,0,2-0.896,2-2v-6.668C83,37.062,82.104,36.166,81,36.166z")
                         span Подробнее
             div.addTable(data-bind-style="display:hiddenAddTable")
-                span.title 01
-                    span.normal  consectetuer adipiscing elit. Aenean commodo ligula e consectetuer adipiscing elit. Aenean commodo ligula e
-                span.title 02
-                    span.normal  consectetuer adipiscing elit. Aeneanuer adipiscing elit. Aenean commodo ligula e
-                span.title 03
-                    span.normal  consectetuer adipiscing elit. Aenean commodo ligula
+                div.page#page1(data-bind-style="display:page1hidden")
+                    span.title 01
+                        span.normal  consectetuer adipiscing elit. Aenean commodo ligula e consectetuer adipiscing elit. Aenean commodo ligula e
+                    span.title 02
+                        span.normal  consectetuer adipiscing elit. Aeneanuer adipiscing elit. Aenean commodo ligula e
+                    span.title 03
+                        span.normal  consectetuer adipiscing elit. Aenean commodo ligul
+                div.page#page2(data-bind-style="display:page2hidden")
+                    span.title 04
+                        span.normal  consectetuer adipiscing elit. Aenean commodo ligula e consectetuer adipiscing elit. Aenean commodo ligula e
+                    span.title 05
+                        span.normal   Aenean commodo ligula e
+                    span.title 06
+                        span.normal   ENDNENDNENDNENE
+                div.paginat
+                    button.pagesbtn#prev(data-bind="onclick:prevBtn") <
+                    button.pagesbtn#next(data-bind="onclick:nextBtn") >

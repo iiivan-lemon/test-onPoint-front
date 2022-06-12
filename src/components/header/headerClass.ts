@@ -15,13 +15,7 @@ export default class HeaderClass {
         return headerTemplate({item: this.info});
     }
 
-    setHandler(): void {
-            document.querySelector(".logo-home").addEventListener("click",this.moveToHome.bind(this))
-    }
-    moveToHome(){
-        const slider:HTMLElement = document.querySelector(".slider");
-        slider.style.transform = `translateX(0px)`;
-    }
+
 
 
 
